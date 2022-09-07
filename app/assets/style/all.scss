@@ -6,11 +6,10 @@
 @import "helpers/mixin";
 
 @import "variable";
-@import "layout/layout";
 @import "config/base";
+@import "layout/layout";
 
-
-@import "index";
-@import "course";
-@import "apply";
-@import "payOrder";
+@import "./pages/index";
+@import "./pages/course";
+@import "./pages/apply";
+@import "./pages/payOrder";
