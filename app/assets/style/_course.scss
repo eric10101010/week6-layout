@@ -1,0 +1,359 @@
+.course {
+    background-color: #1C1C1C;
+    &-content {
+        background-color: #1C1C1C;
+    }
+    &-menu {
+        display: flex;
+        column-gap: $text-base;
+        padding-right: $text-base;
+        &-box {
+            display: flex;
+            justify-content: flex-start;
+            max-width: 1076px;
+            padding-top: $text-3xl;
+            padding-bottom: $text-4xl;
+            @include pad {
+                max-width: 688px;
+                flex-direction: column;
+                align-items: start;
+            }
+            @include mobile {
+                max-width: 336px;
+                padding-top: 40px;
+                padding-bottom: $text-l;
+            }
+        }
+        &-item {
+            border: 1px solid $white;
+            padding: $text-base;
+            border-radius: 8px;
+            a {
+                color: $white;
+                text-align: center;
+                &:hover {
+                    color: $primary;
+                }
+            }
+            &:hover {
+                border: 1px solid $primary;
+            }
+        }
+    }
+    &-card {
+        color: $white;
+        padding-bottom: 80px;
+        @include pad {
+            padding-bottom: $text-5xl;
+        }
+        @include mobile {
+            padding-bottom: 40px;
+        }
+        &-box {
+            max-width: 1076px;
+            @include mobile {
+                width: 336px;
+            }
+        }
+        &-item {
+            width: 100%;
+            background-color: $third;
+            border-radius: $text-l;
+            margin-bottom: $text-xl;
+            display: flex;
+            padding: $text-4xl;
+            justify-content: space-between;
+            column-gap: $text-4xl;
+            @include pad {
+                padding: $text-2xl;
+                max-width: 688px;
+            }
+            @include mobile {
+                padding: $text-xl $text-l;
+                margin-bottom: $text-l;
+                flex-direction: column;
+            }
+        }
+        &-img {
+            //padding-right: 48px;
+            @include pad {
+                padding-right: $text-2xl;
+            }
+            @include mobile {
+                padding-right: 0;
+            }
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+            h4 {
+                text-align: center;
+            }
+        }
+        &-text {
+            max-width: 576px;
+            @include pad {
+                width: 326px;
+            }
+            @include mobile {
+                width: 288px;
+            }
+            h3 {
+                font-size: $text-l;
+                line-height: 35px;
+                @include mobile {
+                    font-size: $text-m;
+                    line-height: 29px;
+                }
+                @include mobile {
+                    padding-top: $text-l;
+                    padding-bottom: $text-xxs;
+                }
+            }
+            h4 {
+                color: $primary;
+            }
+        }
+        &-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: center;
+            h3 {
+                font-size: $text-xl;
+                line-height: 37px;
+                font-family: Azeret Mono;
+            }
+            a {
+                font-size: $text-xm;
+                color: $white;
+                padding: 8px $text-4xl;
+                border: 1px solid $white;
+                border-radius: 8px;
+                @include pad {
+                    padding: 8px $text-l;
+                }
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+    }
+    &-detail {
+        padding-top: 82px;
+        padding-bottom: 83px;
+        @include pad {
+            padding-bottom: 56px;
+        }
+        @include mobile {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        background-color: #1C1C1C;
+        color: $white;
+        &-box {
+            max-width: 1196px;
+            column-gap: $text-l;
+            @include pad {
+                flex-direction: column;
+            }
+        }
+        &-sidebar {
+            position: relative;
+            border: 1px solid $white;
+            width: 416px;
+            position: fixed;
+            background-color: $third;
+            padding: 40px $text-xl;
+            &-box {
+                @include pad {
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 578px;
+                }
+            }
+            @include pad {
+                z-index: 100;
+                margin-top: $text-4xl;
+                position: inherit;
+                position: absolute;
+                justify-content: center;
+            }
+            @include mobile {
+                width: 336px;
+                margin-top: 45px;
+            }
+            &-item {
+                padding-bottom: $text-base;
+                border-bottom: 1px solid $gray-300;
+                &:hover {
+                    color: $primary;
+                    cursor: pointer;
+                }
+                h4 {
+                    font-size: $text-l;
+                    font-family: Azeret Mono;
+                }
+            }
+            &-square {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: $white;
+            }
+            &-square1 {
+                top: -5px;
+                left: -5px;
+            }
+            &-square2 {
+                top: -5px;
+                right: -5px;
+            }
+            &-square3 {
+                bottom: -5px;
+                left: -5px;
+            }
+            &-square4 {
+                bottom: -5px;
+                right: -5px;
+            }
+        }
+        &-card {
+            width: 746px;
+            background-color: $third;
+            border-radius: $text-l;
+            padding: $text-4xl;
+            @include pad {
+                padding: $text-2xl $text-l;
+            }
+            @include mobile {
+                width: 336px;
+                padding: $text-4xl $text-l;
+                display: flex;
+                flex-direction: column;
+            }
+            &-box {
+                max-width: 746px;
+                @include mobile {
+                    justify-content: center;
+                }
+            }
+            &-img {
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                }
+            }
+            &-text {
+                max-width: 502px;
+                h3 {
+                    font-size: $text-l;
+                    @include mobile {
+                        font-size: $text-m;
+                        line-height: 29px;
+                        padding-top: 21px;
+                    }
+                }
+                h4 {
+                    color: $primary;
+                }
+            }
+        }
+        &-one {
+            padding-right: 46px;
+            p {
+                padding-right: 8px;
+                color: $gray-300;
+            }
+            @include mobile {
+                padding-right: 0;
+                p {
+                    padding-right: 0;
+                    width: 44px;
+                    margin-right: 8px;
+                }
+                h3 {
+                    padding-right: $text-2xl;
+                }
+            }
+        }
+        &-two {
+            padding-right: $text-l;
+            p {
+                color: $gray-300;
+            }
+            @include mobile {
+                padding-right: 0;
+                p {
+                    margin-right: 8px;
+                }
+            }
+        }
+        &-teacher {
+            width: 746px;
+            padding: $text-xl;
+            background-color: $third;
+            border-radius: $text-l;
+            @include mobile {
+                width: 336px;
+                padding: $text-l;
+            }
+            &-title {
+                padding-top: $text-4xl;
+                @include mobile {
+                    @include mobile {
+                        padding: 0 $text-l;
+                        padding-top: 40px;
+                    }
+                }
+            }
+            &-header {
+                padding-bottom: $text-xl;
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: $text-l;
+                }
+            }
+            &-body {
+                border-top: 1px solid $gray-300;
+                padding-top: $text-xl;
+                @include mobile {
+                    padding-top: $text-l;
+                }
+            }
+        }
+        &-course {
+            max-width: 746px;
+            background-color: $third;
+            border-radius: $text-l;
+            padding: $text-xl;
+            @include mobile {
+                width: 336px;
+                padding: $text-l;
+            }
+            h3 {
+                border-left: 2px solid $primary;
+            }
+            h4 {
+                @include mobile {
+                    margin-bottom: $text-xl;
+                }
+            }
+            &-item {
+                padding-bottom: $text-xl;
+            }
+            &-item li::before {
+                content: '';
+                display: inline-block;
+                width: 5px;
+                height: 5px;
+                background-color: $primary;
+                vertical-align: middle;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,283 @@
+.container {
+    max-width: 1440px;
+}
+.header {
+    z-index: 100;
+    background-color: $third;
+    &-line {
+        display: block;
+        height: 2px;
+        background-image: linear-gradient(to right, $primary 50% , $secondary 50%);
+    }
+    &-box {    
+        justify-content: space-between;
+        align-items: center;
+        @include pad {
+            padding: 0 39px;
+        }
+        @include mobile {
+            padding: 0 15px;
+        }
+    }
+    &-logo{
+        &:hover {
+            opacity: .5;
+            transition: .5s;
+        }
+        img {
+            width: $text-3xl;
+            height: $text-3xl;
+        }
+        a {
+            color: #C1C1C1;
+            img {
+                @include mobile {
+                    width: $text-l;
+                    height: $text-l;
+                }
+            }
+            h1 {
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item{
+        padding: 0 $text-l;
+        @include mobile {
+            width: 50%;
+            border: 1px solid $white;
+        }
+        span {
+            margin-right: 6px;
+            font-size: $text-m;
+        }
+        a{
+            color: $white;
+            font-size: $text-xm;
+            line-height: 26px;
+            line-height: 1.5;
+            @include mobile{
+                font-size: $font-size-base;
+                padding: $text-xs 0;
+            }
+        }
+        @include mobile{
+            text-align: center;
+        }
+    }
+    &-link {
+        font-size: $text-m;
+        color: $white;
+    }
+    &-link:hover{
+        opacity: .5;
+        transition: .5s;
+    }
+}
+
+.footer {
+    background-color: #1A1A1A;
+    h2 {
+        font-family: Azeret Mono;
+        text-align: center;
+        line-height: 19px;
+        padding: $text-l 0;
+        color: #909090;
+        @include mobile {
+            font-size: $text-xs;
+            line-height: $text-s;
+            padding: $text-base;
+        }
+    }
+}
+
+.modal {
+    &-content {
+        @include pad {
+            width: 460px;
+        }
+        @include mobile {
+            width: 336px;
+        }
+    }
+    &-login {
+        width: 636px;
+        background-color: $third;
+        border: 1px solid $white;
+        h4 {
+            font-size: $text-l;
+            line-height: 35px;
+            padding-bottom: $text-l;
+        }
+        @include pad {
+            width: 460px;
+        }
+        @include mobile {
+            width: 336px;
+        }
+        &-header {
+            padding: $text-l;
+            @include mobile {
+                padding-bottom: 5px;
+            }
+            h3 {
+                font-size: $text-l;
+                line-height: 35px;
+                color: $white;
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+        &-body {
+            width: 331px;
+            @include mobile {
+                width: 288px;
+            }
+            a {
+                color: $white;
+                border-radius: 8px;
+                text-align: center;
+                padding: 8px 0;
+                margin-bottom: 60px;
+                @include pad {
+                    margin-bottom: $text-4xl;
+                }
+                @include mobile {
+                    margin-bottom: $text-2xl;
+                }
+                &:hover {
+                    opacity: .5;
+                }
+            }
+        }
+        &-footer {
+            position: relative;
+            padding-top: 27px;
+            border-top: 1px solid #C1C1C1;
+            width: 331px;
+            @include mobile {
+                padding-top: $text-2l;
+                width: 288px;
+            }
+            &-mb {
+                margin-bottom: $text-4xl;
+                @include mobile {
+                    margin-bottom: 40px;
+                }
+            }
+            &-button {
+                display: flex;
+                justify-content: center;
+                border: 1px solid $white;
+                border-radius: $text-xxs;
+                cursor: pointer;
+                &:hover {
+                    opacity: .5;
+                }
+                img {
+                    width: $text-l;
+                    height: $text-l;
+                    position: absolute;
+                    left: $text-xl;
+                }
+                a {
+                    padding: 8px 0;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.login-border {
+    color: #C1C1C1;
+    padding: 0 $text-base;
+    background-color: $third;
+    position: absolute;
+    top: -16px;
+    left: 30%;
+}
+
+.hamburger-menu {
+    background-color: $third;
+    z-index: 100;
+    width: 100%;
+    position: absolute;
+    top: 74px;
+    right: 0;
+    transform: scaleY(0);
+    transition: transform .3s ease-in-out;
+    transform-origin: 50% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hamburger-item {
+    padding: $text-l 0;
+    a {
+        font-size: $text-xm;
+    }
+    span {
+        font-size: $text-l;
+        margin-right: $text-xxs;
+
+    }
+}
+.hamburger-item a {
+    color: $white;
+}
+.hamburger-item a:hover{
+    opacity: .5;
+}
+#toggler:checked ~ .hamburger-menu {
+    transform: scaleY(1);
+}
+
+.hamburger  {
+    position: relative;
+    width: $text-base;
+    height: 2px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.hamburger span{
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: $text-base;
+    background: $primary;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+.hamburger span:nth-child(2),.hamburger span:nth-child(3) {
+    top: 6px;
+}
+.hamburger.open span:nth-child(1) {
+    top: 6px;
+    width: 0%;
+    left: 50%;
+}
+.hamburger.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}

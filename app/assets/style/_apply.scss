@@ -1,0 +1,298 @@
+.pay-progress {
+    background-color: #1C1C1C;
+    height: 88px;
+}
+.apply {
+    padding-top: $text-4xl;
+    padding-bottom: 144px;
+    background-color: $black;
+    @include pad {
+        padding-bottom: $text-5xl;
+    }
+    @include mobile {
+        padding-top: $text-l;
+        padding-bottom: 40px;
+    }
+    &-box {
+        max-width: 1198px;
+        display: flex;
+        justify-content: flex-end;
+        @include mobile {
+            justify-content: center;
+        }
+    }
+    &-sidebox {
+        position: absolute;
+        top: 32%;
+        left: 120px;
+        z-index: 10;
+        width: 416px;
+        color: $white;
+        padding: $text-4xl $text-xl;
+        background-color: $third;
+        @include pad {
+            top: 0px;
+            left: 22%;
+        }
+        @include mobile {
+            width: 336px;
+            padding: $text-l;
+            left: 19.5px;
+            top: 0;
+        }
+        &-img {
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 3px solid $primary;
+            }
+        }
+        &-text {
+            h3 {
+                font-size: $text-xm;
+                text-align: center;
+                @include mobile {
+                    font-size: $text-base;
+                }
+            }
+            h4 {
+                text-align: center;
+            }
+        }
+        &-triangle {
+            position: absolute;
+            top: 50%;
+            right: -12px;
+            width: 0;
+            border-style: solid;
+            border-width: $text-xs 0 $text-xs $text-xs;
+            border-color: transparent transparent transparent $third;
+            @include pad {
+                top: 100%;
+                right: 0;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: $text-xs $text-xs 0 $text-xs;
+                border-color: $third transparent transparent transparent;
+            }
+        }
+    }
+    &-content {
+        &-block {
+            position: relative;
+        }
+        display: flex;
+        flex-direction: column;
+        max-width: 856px;
+        background-color: #1C1C1C;
+        color: $white;
+        padding: $text-4xl 0;
+        padding-left: 114px;
+        padding-right: $text-xl;
+        @include pad {
+            margin-top: 395px;
+        }
+        @include mobile {
+            margin-top: 344px;
+            max-width: 336px;
+            padding: 0 $text-l;
+        }
+        &-title {
+            display: flex;
+            justify-content: center;
+            h3 {
+                font-size: $text-l;
+                line-height: 35px;
+            }
+            padding: $text-4xl 0;
+            @include mobile {
+                padding: $text-l 0;
+            }
+        }
+        &-payway{
+            padding-bottom: $text-xl;
+            h3 {
+                font-size: $text-xm;
+                line-height: 26px;
+                @include mobile {
+                    text-align: center;
+                }
+            }
+            &-list {
+                padding-top: 6px;
+                display: flex;
+                column-gap: $text-base;
+                @include mobile {
+                    padding-top: $text-base;
+                    flex-direction: column;
+                }
+            }
+            &-item {
+                a {
+                    padding: $text-base $text-xl;
+                    color: $white;
+                    border: 1px solid $white;
+                    border-radius: 8px;
+                    &:hover {
+                        color: $primary;
+                        border: 1px solid $primary;
+                    }
+                    @include mobile {
+                        width: 140px;
+                        text-align: center;
+                        padding: $text-base 0;
+                    }
+                }
+            }
+        }
+        &-order {
+            h3 {
+                font-size: $text-xm;
+                line-height: 26px;
+                padding-bottom: $text-l;
+                @include mobile {
+                    text-align: center;
+                    padding-bottom: $text-base;
+                }
+            }
+            &-form {
+                label {
+                    color: $gray-300;
+                    padding-bottom: 6px;
+                }
+                input, select, textarea{
+                    width: 331px;
+                    background-color: #1C1C1C;
+                    color: $gray-300;
+                    border: 1px solid $white;
+                    border-radius: $text-xxs;
+                    padding: 8px $text-base;
+                    @include mobile {
+                        width: 288px;
+                    }
+                }
+                select {
+                    color: $white;
+                }
+            }
+            &-button {
+                display: flex;
+                justify-content: space-between;
+                padding-top: $text-l;
+                @include mobile {
+                    flex-direction: column;
+                    span {
+                        text-align: left;
+                    }
+                    a {
+                        text-align: center;
+                        width: 100%;
+                        margin-top: $text-l;
+                    }
+                }
+                span {
+                    font-size: $text-xm;
+                    line-height: 21px;
+                    font-family: Azeret Mono;
+                }
+                a{
+                    font-size: $text-xm;
+                    line-height: 26px;
+                    padding: 8px $text-4xl;
+                    color: $white;
+                    border-radius: 8px;
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.timeline {
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        top: 9px;
+        left: 0;  
+        right: 0;
+        height: 2px;
+        background-color: $gray-300;
+    }
+    &-2 {
+        &::after {
+            position: absolute;
+            content: '';
+            top: 9px;
+            left: 0;  
+            right: 0;
+            height: 2px;
+            background-image: linear-gradient(to right, $primary 50% , $gray-300 50%);
+        }
+    }
+    &-3 {
+        &::after {
+            position: absolute;
+            content: '';
+            top: 9px;
+            left: 0;  
+            right: 0;
+            height: 2px;
+            background-color: $primary;
+        }
+    }
+    &-pointer {
+        position: relative;
+        color: $gray-300;
+        p {
+            padding-top: $text-l;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+        &::before {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: $text-m;
+            height: $text-m;
+            border: 1px solid $gray-300;
+            border-radius: 50%;
+            background-color: $third;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: $text-xs;
+            z-index: 1;
+        }
+        &.step-1::before {
+            content: '1';
+        }
+        &.step-2::before {
+            content: '2';
+        }
+        &.step-3::before {
+            content: '3';
+        }
+        &.active {
+            color: $primary;
+            &::before {
+                color: $white;  
+                background-color: $primary;
+                border-color: $primary;
+            }
+        }
+    }
+}
+
+.datepicker-cell:not(.disabled):hover {
+    background-color: #e8e8e8;
+}
+.datepicker-cell.selected, .datepicker-cell.selected:hover {
+    background-color: #e8e8e8;
+    color: #000;
+}

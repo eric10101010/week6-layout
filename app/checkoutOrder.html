@@ -1,0 +1,48 @@
+---
+title: 付款成功
+layout: ./app/layout.ejs
+engine: ejs
+current: checkoutOrder
+---
+<section class="pay-progress pt-4">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-9 col-md-7 timeline timeline-3">
+            </div>
+        </div>
+        <div class="row text-white">
+            <div class="col-3 col-md-5">
+                <div class="timeline-pointer text-center step-1 active">
+                    <p>課程報名</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <div class="timeline-pointer text-center step-2 active">
+                    <p>信用卡付款</p>
+                </div>
+            </div>
+            <div class="col-3 col-md-5">
+                <div class="timeline-pointer text-center step-3 active">
+                    <p>付款成功</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="checkout">
+    <div class="container d-flex justify-content-center">
+        <div class="checkout-content">
+            <div class="checkout-content-title d-flex justify-content-center align-items-center pb-lg-5 pb-md-5 pb-4">
+                <span class="material-symbols-outlined text-primary fw-bold pe-3">
+                    verified
+                </span>
+                <h3 class="fw-bold">完成訂購</h3>
+            </div>
+            <p>恭喜您已完成<span class="fw-bold">「2022 Python 全攻略｜從入門到實務」</span>課程報名，請注意郵件訊息，家教老師將與您聯繫！</p>
+            <div class="checkout-content-button d-flex justify-content-center">
+                <a href="./course.html" class="bg-gradient">看看其他課程</a>
+            </div>
+        </div>
+    </div>
+</section>
