@@ -20,6 +20,9 @@
         }
     }
     &-logo{
+        h1 {
+            font-family: Azeret Mono;
+        }
         &:hover {
             opacity: .5;
             transition: .5s;
