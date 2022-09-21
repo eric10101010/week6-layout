@@ -9617,6 +9617,8 @@ a {
     @media (max-width: 767px) {
       .header-box {
         padding: 0 15px; } }
+  .header-logo h1, .header-logo .h1 {
+    font-family: Azeret Mono; }
   .header-logo:hover {
     opacity: .5;
     -webkit-transition: .5s;
@@ -9891,6 +9893,8 @@ a {
   background-image: url(../images/bg_home.jpg);
   background-size: cover;
   height: 680px; }
+  .index-banner-box {
+    background-color: #1C1C1C; }
   @media (max-width: 992px) {
     .index-banner {
       height: 530px; } }
@@ -10527,7 +10531,6 @@ a {
           justify-content: center; }
   .index-reserve-content {
     text-align: center;
-    padding: 0 24px;
     color: #FFFFFF;
     width: 966px;
     margin: 80px 0;
@@ -10547,7 +10550,7 @@ a {
         margin-top: 40px;
         margin-bottom: 38px; } }
   .index-reserve-join {
-    padding: 48px 24px;
+    padding: 48px 48px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
